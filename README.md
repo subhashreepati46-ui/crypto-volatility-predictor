@@ -1,13 +1,28 @@
-# Crypto Volatility Prediction
+# Crypto Volatility Prediction using Machine Learning
 
-This project predicts future cryptocurrency volatility using machine learning.
+This project predicts future cryptocurrency volatility using multi-asset historical OHLC, volume, and market cap data.
 
-## Run Pipeline
-pip install -r requirements.txt
-python3 -m src.pipeline.run_pipeline
+It includes feature engineering techniques such as:
+- Rolling volatility
+- Moving averages
+- Liquidity ratios
+- Bollinger Bands
+- Average True Range (ATR)
 
-## Run App
-streamlit run app/streamlit_app.py
+An XGBoost model is trained and deployed using Streamlit for real-time predictions.
 
-## Notebook
-notebooks/EDA.ipynb
+---
+
+## 📂 Project Structure
+
+crypto-volatility-predictor/
+│
+├── src/ # Core ML pipeline
+├── app/ # Streamlit application
+├── data/ # Raw and processed datasets
+├── reports/ # Final reports and screenshots
+├── notebooks/ # EDA notebooks
+├── requirements.txt
+└── README.md
+
+---
